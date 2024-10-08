@@ -1,0 +1,51 @@
+El paradigma dice: Todo lo que vamos a resolver es mediante creaciones de objetos.
+
+Que es POO:
+Los objetos se crean a partir de una plantilla llamada "clase". Cada objeto es una instancia de su clase.
+
+Organiza las funciones en entidades llamadas objetos.
+Los objetos tienen datos/propiedades (atributos) y funcionalidades/acciones (metodos).
+
+Dentro de la clase los atributos son las variables.
+Dentro de la clase los metodos son las funciones.
+
+
+Se centra en:
+
+Herencia: Permite a la clase "Hija" acceder a todos los metodos y tener las propiedades de la clase "Padre".Hija va a tener todo lo de Padre, mas otras cosas nuevas.
+** Ejemplo: Receta de cocina, la receta de como hacer la galletita es el Padre, luego si quiero hacer una galletita de chocolate o de almendras, tomo la receta original (padre-superclase) y solo le agrego los condimentos nuevos (metodos y atributos de la Hija-subclase). Con eso evito volver a construir toda la receta base de nuevo.
+** Se llama "Herencia Gerarquica" cuando existe una clase (super) de las que dependen las demas (sub)
+** Herencia multiple es cuando heredo de mas de una clase.
+** MRO: Define el orden de las herencias.
+
+Polimorfismo: Hace referencia a enviar un mismo mensaje a los objetos, obteniendo diferentes resultados en base a sus propiedades. Un metodo se comportaria diferente dependiendo del objeto.
+** Ejemplo: Si a un perro le digo "emiti_sonido" ladra, pero a un gato "emiti_sonido" va a generar que maulle.
+
+
+Encapsulamiento: Proteger variables o propiedades.
+** La forma de indicar que un atributo es privado, sera hacer que inicie con "_". Igual se puede acceder
+** La forma de indicar que un atributo es MUY privado, sera hacer que inicie con  "__" (doble guion bajo).
+** Cuando y por que usarlo: Permite ocultar complejidad interna de la clase y proteger los atributos. Mejora la legivilidad, mantenimiento y evolucion.
+** Realmente lo que pasa es que cambia el nombre internamente, para evitar accederlo por accidente. A esto se lo conoce como el proceso Name Mangling.
+** Tambien existen los metodos privados. Ejemplo, def __hablar(self).
+Setters Y Getters: Es un concepto, Permiten acceder y modificar las clases privadas.
+** Si veo un atributo o funcion con "_" deberia respetar que le quiere dar un sentido privado y utilizar getter para acceder.
+** Por convencion, las funciones setter o getter inician con "set" o "get" , ejemplo def set_atributo(self):
+
+Abstraccion: Maneja la complejidad ocultando todos los detalles innecesarios al programador , dandole solamente las funciones relevantes.
+** No se necesita saber como funciona internamente algo, solo saber utilizarlo.
+** Ejemplo: Un celular, no necesito saber como funcionan exactamente los botones, pero si que hacen.
+
+
+Implementacion de un metodo: Implementar un metodo es definir como se va a funcionar.
+
+La finalidad es la facilidad de reutilizacion del codigo, la abstraccion y la modularidad.
+
+
+Al momento de crear las clases solo debo usar parentesis si quiero especificar que hereda propiedades de otra clase
+
+Class Clase1:
+  pass
+
+Class Clase2(ClasePadre):
+  pass

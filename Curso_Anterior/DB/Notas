@@ -1,0 +1,12 @@
+Instalar librerias:
+
+Algunas opciones son:
+PyMySql connection ---> pip install PyMySQL
+SQL Alchemy connection ---> pip install SQLAlchemy
+Flask connection ---> pip install flask-mysqldb
+Mysql connection ---> pip install mysql-connector-python (Instale este)
+
+
+DEFINICIONES:
+
+CRUD : Create / Read / Update / Delete > ABM de toda la vida

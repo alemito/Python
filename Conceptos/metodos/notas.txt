@@ -1,0 +1,38 @@
+1. Métodos:
+
+    Un método es una función asociada a un objeto que actúa sobre ese objeto. Generalmente, los métodos son llamados con objeto.metodo().
+    Los métodos realizan acciones sobre un objeto o permiten interactuar con su contenido. Por ejemplo:
+
+python
+
+mi_lista = [1, 2, 3]
+mi_lista.append(4)  # append() es un método que añade un elemento a la lista
+
+2. Funciones:
+
+    Una función es un bloque de código reutilizable que realiza una acción y puede o no devolver un valor. Se define con def y se llama por su nombre.
+
+python
+
+def saludar(nombre):
+    return f"Hola, {nombre}!"
+
+3. Atributos:
+
+    Un atributo es una propiedad o valor asociado a un objeto. En lugar de realizar acciones (como los métodos), los atributos almacenan información sobre el objeto.
+
+Por ejemplo:
+
+python
+
+class Persona:
+    def __init__(self, nombre):
+        self.nombre = nombre  # nombre es un atributo de la clase Persona
+
+p = Persona("Lucas")
+print(p.nombre)  # Aquí accedemos al atributo 'nombre'
+
+4. Atributos Especiales (como __name__):
+
+    En Python, hay ciertos atributos que son especiales y están rodeados de dobles guiones bajos (__). Estos son conocidos como atributos mágicos o especiales y tienen un comportamiento definido por el lenguaje.
+    __name__ es uno de estos atributos. En el caso de los módulos, __name__ contiene el nombre del módulo. Si el módulo se ejecuta como un script, __name__ toma el valor '__main__'.

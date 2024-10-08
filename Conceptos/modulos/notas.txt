@@ -1,0 +1,46 @@
+Si quiero obtener todas las funciones que se pueden usar de un modulo , luego de importarlo debo hacerle un "dir"
+
+import modulo
+
+print(dir(modulo))
+
+Se puede identificar si el modulo a ejecutar es propio o importado con el atributo especial __name__
+
+print(modulo.__name__)
+
+Si es propio, dirá "main" si es externo dirá el nombre del modulo.
+Es redundante, pero sirve para controles, por ejemplo:
+
+# modulo_propio.py
+if __name__ == "__main__":
+    print("Este archivo se ejecutó directamente.")
+else:
+    print(f"Este archivo fue importado como módulo con el nombre: {__name__}")
+
+
+Ver todos los modulos de los modulos de python
+
+import sys
+print(sys.builtin_module_names)
+
+Ver rutas donde leerá los modulos para importar.
+
+print(sys.path)
+
+Si quiero agregar una ruta de modulos tengo que hacer :
+sys.path.append("Mi directorio")
+
+
+Modulo o paquete.
+Si la carpeta tiene un archivo __init__.py , Python entenderá que es un paquete
+
+1. Módulos:
+
+    Un módulo es cualquier archivo .py que contiene código de Python (funciones, variables, clases, etc.).
+    Cuando haces import modulo, estás trayendo el contenido de ese archivo a tu programa.
+
+2. Paquetes:
+
+    Un paquete es un directorio que contiene múltiples módulos (es decir, varios archivos .py), y este directorio debe contener un archivo especial llamado __init__.py.
+    El archivo __init__.py puede estar vacío o puede contener código de inicialización para el paquete.
+    Al hacer import paquete, puedes acceder a los módulos dentro de ese paquete sin tener que importarlos todos por separado.

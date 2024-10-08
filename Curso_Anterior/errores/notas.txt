@@ -1,0 +1,60 @@
+Los errores detienen la ejecucion del programa. Pueden originarse de varias maneras.
+Entre los más comunes se encuentras los "errores de sintaxis", que se identifican con el codigo "SyntaxError" y tienen lugar cuando no se 
+respetan las reglas sintacticas de pyrtgon. Por ejemplo olvidar cerrar un parentesis.
+
+print("hola"  > SyntaxError: '(' was never closed.
+
+EXCEPCIONES:
+
+Bloques try, except y finally.
+
+TRY: Define el codigo que queremos que intente hacer.
+EXCEPT: Lo que debe hacer si el codigo no funciono.
+FINALLY: sentencias de finalizacion, se ejecuta siempre hayua surgido una excepcion o no.
+    se suele utilizar para acciones de limpieza o para cerrar la conexion a la base de datos.
+
+Si hay un except, no es necesario que este presente el finally. Tambien puede haber un try sin except y con finally.
+
+
+Tipos de Except:
+
+* Exception:
+Capturar esta excepción implica manejar cualquier tipo de error, pero se debe hacer con precaución, ya que también puede
+capturar errores de programación.
+
+except Exception as e:
+    # Manejar cualquier excepción
+
+* ValueError: Se lanza cuando una función recibe un argumento del tipo correcto pero con un valor incorrecto.
+
+except ValueError as ve:
+    # Manejar errores de tipo ValueError
+
+* TypeError: Se lanza cuando una operación o función se aplica a un objeto de tipo inapropiado.
+
+except TypeError as te:
+    # Manejar errores de tipo TypeError
+
+* FileNotFoundError: Se lanza cuando se intenta acceder a un archivo que no existe.
+
+except FileNotFoundError as fe:
+    # Manejar errores de tipo FileNotFoundError
+
+* ZeroDivisionError: Se lanza cuando se intenta dividir un número por cero.
+
+except ZeroDivisionError as zde:
+    # Manejar errores de tipo ZeroDivisionError
+
+
+Pueden existir varios except en un mismo codigo, para capturar el tipo correcto.
+    try:
+        #resultado = 2/5 # 0.4
+        #resultado = 2/"5" # No se puede dividir por una cadena de string
+        resultado = 2/0 # No se puede dividir por cero
+        print(f"El resultado es: {resultado}")
+    except TypeError:
+        print("No se puede dividir por una cadena de string")
+    except ZeroDivisionError:
+        print("No se puede dividir por cero")
+    except Exception as e:
+        print("Ha ocurrido un error no previsto", type(e))

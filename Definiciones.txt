@@ -1,0 +1,79 @@
+Las funciones tienen que ser modularizables y ser explicita. Encargarse de una sola funcionalidad.
+
+
+Convenciones de nomenclatura de PEP 8:
+
+los nombres de las clases deben ser PascalCase (MyClass)
+Los nombres de las variables deben ser en minúsculas y snake_case (first_name).
+Los nombres de las funciones deben ser snake_case y todos en minúsculas (quick_sort()).
+las constantes deben ser Snake_case y todas en mayúsculas (PI = 3,14159)
+Los módulos deben tener nombres cortos, en mayúsculas y minúsculas (numpy).
+Las comillas simples y dobles se tratan de la misma manera (solo elige una y sé coherente)
+Utilizamos "" para strings  (Para consultas SQL no se respetara)
+La key de un diccionario se usa con comilla simple (diccionario['key'])
+
+Formato PEP de 8 líneas:
+Sangría usando TAB
+Las líneas no deben tener más de 79 caracteres.
+Evite múltiples declaraciones en la misma línea.
+Las definiciones de funciones y clases de nivel superior están rodeadas por dos líneas en blanco.
+# 1 espacio entre métodos
+# 2 espacios entre clases y funciones
+class ClaseA:
+    def metodo_a(self):
+        pass
+
+    def metodo_b(self):
+        pass
+
+
+class ClaseB:
+    def metodo_a(self):
+        pass
+
+    def metodo_b(self):
+        pass
+
+
+def funcion():
+    pass
+Las definiciones de métodos dentro de una clase están rodeadas por una sola línea en blanco
+Las importaciones deben estar en líneas separadas
+
+Identado:
+from typing import (
+    Literal,
+    Optional,
+    Union,
+    Dict,
+    List,
+    Any,
+    )
+
+def __init__(
+    self,
+    a,
+    b,
+    c,
+  )
+
+diccionario= {
+              'a':'b', 
+              'b':'c',
+              'd':'e',
+              }
+
+Espacio en blanco PEP 8:
+
+Evite espacios adicionales entre corchetes o llaves.
+Evite dejar espacios en blanco en cualquier lugar
+Siempre rodee los operadores binarios con un solo espacio a cada lado
+Si se utilizan operadores con diferentes prioridades, considere agregar espacios en blanco alrededor de los operadores con la prioridad más baja.
+No utilice espacios alrededor del signo = cuando se utilice para indicar un argumento de palabra clave
+
+PEP 8 comentarios:
+
+Los comentarios no deben contradecir el código
+Los comentarios deben ser oraciones completas
+Los comentarios deben tener un espacio después del signo # con la primera palabra en mayúscula
+Los comentarios de varias líneas utilizados en funciones (cadenas de documentos) deben tener una breve descripción de una sola línea seguida de más texto.

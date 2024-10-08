@@ -1,0 +1,70 @@
+El paradigma dice: Todo lo que vamos a resolver es mediante creaciones de objetos.
+
+Que es POO:
+Los objetos se crean a partir de una plantilla llamada "clase". Cada objeto es una instancia de su clase.
+
+Organiza las funciones en entidades llamadas objetos.
+Los objetos tienen datos (atributos) y funcionalidades (metodos).
+
+Ejemplo: 
+
+    Objeto: Usuarios, Profesores, Ventas, Cursos, Facturas.
+    Atributos: Nombre,apellido, corre, contraseña,etc. (Informacion/caracteristicas)
+    Metodos: Editar perfil, Iniciar sesion, Cerrar session, Cambiar contraseña. (Lo que puede hacer/ como se comporta)
+
+
+En una aplicacion los objetos están separados, pero se comunican entre ellos.
+
+
+Objeto persona:
+
+    Atributos: Nombre, genero, peso, edad.
+    Metodos: Caminar, correr, hablar, saludar.
+
+La clase es el mulde / receta.
+
+
+Identidad:  Cada objeto tiene una identidad que lo distingue de otros objetos, sin considerar su estado.
+
+Objeto Bicicleta:
+
+Atributos: diametro de rueda, tipo asciento, numero de rayos.
+
+Metodos:  Frenar, Pedalear, Girar.
+
+
+Los metodos permiten a los objetos de una clase realizar acciones. Se declaran con "def" dentro de una clase.
+Reciben parametros y uno de ellos, el primero (self) es obligatorio.
+ChatGPT:
+Self No es estrictamente obligatorio, pero es una convención muy común y útil en la definición de métodos dentro de clases. 
+La palabra clave self se utiliza para referirse a la instancia de la clase en la que se está trabajando. 
+Es una convención en Python nombrar el primer parámetro de un método de clase como self, pero podrías llamarlo de otra manera si realmente lo deseas.
+
+Metodo constructor:
+Es un metodo que permite a la clase asignar valores a los atributos. su primer parametro es "self", y los demas los requeridos para la inicializacion.
+
+Luego de instanciar el objeto, establecemos los valores de los atributos mediante el constructor, y ya podremos utilizarlos normalmente.
+
+Abreviacion del metodo constructor: __init__()
+
+__init__ es un metodo especial que se llama automaticamente cuando se crea una nueva instancia de la clase.
+Su funcion es realizar cualquier inicializacion que sea necesaria con los argumentos que se le pasan al crear una instancia de la clase.
+
+
+Metodo __str__():
+Para mostrar objetos existe un emtodo especial llamado __str__, que debe devolver una cadena de caracteres con lo que queremos mostrar.
+Este metodo se invoca cada vez que se allama a la funcion str, por ejemplo, al imprimir el objeto.
+__str__ tiene un solo parametro = "Self"
+
+
+ELIMINAR OBJETOS:
+
+El metodo especial __del__() se invoca automaticamente cuando el objeto se elimina de la memoria. Se puede utilizara para realizar alguna accion especial
+cuando tiene lugar este evento. Su sintaxis tiene como unico parametro "Self".
+Los objetos se borran con "del" o se eliminan al finalizar el programa.
+
+Puedo colocar directamente "del Nombre_objeto " para que lo elimine. Pero si coloco una funcion del dentro de la clase, puedo personalizar aun mas 
+la accion, ejemplo imprimir un mensaje.
+
+
+
