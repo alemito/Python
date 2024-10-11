@@ -22,5 +22,5 @@ Cambia el parametro, no la funcion.
 def hacer_sonido(animal):
     print(animal.sonido())
 
-hacer_sonido(animal1)
-hacer_sonido(animal2)
+hacer_sonido(animal1) # o hacer_sonido(Gato())
+hacer_sonido(animal2) # o hacer_sonido(Perro())
